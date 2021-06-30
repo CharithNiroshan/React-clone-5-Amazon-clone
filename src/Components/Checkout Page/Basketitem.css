@@ -1,0 +1,70 @@
+.basketitem {
+  border: 1px solid #e7e7e7;
+  padding: 15px;
+  max-width: 230px;
+  margin: 10px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.basketitem_image {
+  margin-bottom: 10px;
+}
+.basketitem_details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.basketitem_title {
+  font-size: 1.4vw;
+  font-weight: 400;
+  color: rgb(22, 22, 22);
+  margin-bottom: 8px;
+}
+.basketitem_owner {
+  font-size: 1vw;
+  font-weight: 400;
+  color: rgb(22, 22, 22);
+  margin-bottom: 8px;
+}
+.basketitem_price {
+  font-size: 1.3vw;
+  font-weight: 800;
+  color: rgb(22, 22, 22);
+  margin-bottom: 8px;
+}
+.basketitem_type {
+  font-size: 0.9vw;
+  font-weight: 900;
+  color: rgb(22, 22, 22);
+  margin-bottom: 8px;
+}
+.basketitem_stock_status {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #007600;
+  margin-bottom: 8px;
+}
+.delete_item {
+  font-size: 0.9vw;
+  font-weight: 400;
+  color: #0066c0;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.basketitem_quantity select {
+  border: none;
+  background-color: none;
+  font-size: 0.9vw;
+}
+.basketitem_quantity {
+  background-color: rgb(223, 217, 217);
+  font-size: 0.9vw;
+  padding: 7px 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+.basketitem_quantity:hover {
+  cursor: pointer;
+}

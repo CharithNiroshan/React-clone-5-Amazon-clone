@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: #232f3e;
+  height: 40px;
+  color: white;
+  /* position: sticky;
+  top: 65px; */
+  padding: 0px 15px;
+}
+.navbar_item {
+  font-size: 13px;
+  margin: 0px 10px;
+}
+.sidebar {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+.sidebar_icon {
+  height: 28px !important;
+  margin-right: 5px;
+}
+.sidebar_tag {
+  font-size: 13px;
+  font-weight: 800;
+}

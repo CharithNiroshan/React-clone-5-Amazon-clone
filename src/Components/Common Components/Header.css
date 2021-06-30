@@ -1,0 +1,83 @@
+.header {
+  height: 65px;
+  background-color: #0e172b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: sticky;
+  top: 0; */
+  padding-right: 10px;
+  z-index: 100;
+}
+.logo {
+  width: 95px;
+  object-fit: contain;
+  margin: 0 15px;
+  margin-top: 10px;
+  padding: 5px;
+}
+.search_bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0px 15px;
+}
+.search_input {
+  height: 20px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+}
+.search_icon {
+  padding: 5px;
+  height: 30px !important;
+  width: 40px !important;
+  background-color: #eeb262;
+  color: black !important;
+}
+.header_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header_field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 10px;
+  color: white;
+}
+.delivery_place {
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+.header_field_line_one {
+  font-size: 12px;
+  padding: 3px 0px;
+  color: rgb(233, 230, 230);
+}
+.header_field_line_two {
+  font-size: 13px;
+  font-weight: 600;
+}
+.cart {
+  position: relative;
+  margin: 0px 10px;
+  color: white;
+}
+.cart_icon {
+  padding: 5px;
+  height: 35px !important;
+  width: 40px !important;
+}
+.cart_count {
+  position: absolute;
+  font-size: 15px;
+  padding: 1px 2px;
+  font-weight: 800;
+  top: 0;
+  left: 19px;
+  color: #f59b26;
+  background-color: #0e172b;
+}
