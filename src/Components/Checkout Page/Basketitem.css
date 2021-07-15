@@ -1,8 +1,6 @@
 .basketitem {
   border: 1px solid #e7e7e7;
-  padding: 15px;
-  width: 28%;
-  margin: 10px 10px 0px 0px;
+  padding: 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +63,7 @@
 .basketitem_quantity {
   background-color: rgb(223, 217, 217);
   font-size: 0.9vw;
-  padding: 7px 10px;
+  padding: 1vw;
   margin-bottom: 8px;
   border-radius: 5px;
 }

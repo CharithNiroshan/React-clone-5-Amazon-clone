@@ -1,13 +1,15 @@
 .checkout {
-  width: 97%;
+  width: 100%;
   display: flex;
-  margin: 35px auto;
+  justify-content: space-between;
   align-items: flex-start;
+  padding: 3vw 1.5%;
+  background-color: rgb(234, 237, 237);
 }
 .checkout_left {
-  flex: 0.7;
   background-color: white;
-  padding: 20px;
+  flex: 0.68;
+  padding: 2vw;
 }
 .checkout_title {
   font-size: 2.1vw;
@@ -17,42 +19,42 @@
   color: rgb(41, 40, 40);
 }
 .basket_item_container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1vw;
+  margin: 1vw 0px;
 }
 .checkout_right {
   display: flex;
   flex: 0.3;
   align-items: flex-end;
   flex-direction: column;
-  margin-left: 20px;
 }
 .subtotal_box {
-  width: 80%;
+  width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 1.5vw;
 }
 .checkout_button {
   width: 95%;
   border: none;
-  padding: 8px;
+  padding: 1vw;
   font-size: 1vw;
   background-color: #f7ca38;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 0.8vw;
 }
 .suggested_item_box {
-  width: 80%;
+  width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px;
-  margin-top: 15px;
+  padding: 1.5vw;
+  margin-top: 1.5vw;
 }
 .suggested_item_box_title {
   font-size: 1vw;

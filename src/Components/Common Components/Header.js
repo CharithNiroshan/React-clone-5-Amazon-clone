@@ -8,6 +8,11 @@ import { useDataLayerValue } from "../../Context API/Datalayer";
 
 function Header() {
   const [{ cart }, dispatch] = useDataLayerValue();
+  const linkstyles = {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "1vw",
+  };
 
   return (
     <div className="header">
@@ -18,8 +23,8 @@ function Header() {
         />
       </Link>
       <div className="delivery_place">
-        <LocationOnIcon />
-        <div className="header_field">
+        <LocationOnIcon className="location_icon" />
+        <div className="header_field" style={{ marginLeft: "5px" }}>
           <span className="header_field_line_one">Deliver to</span>
           <span className="header_field_line_two">Sri Lanka</span>
         </div>
@@ -30,19 +35,23 @@ function Header() {
       </div>
       <div className="header_details">
         <div className="header_field">
-          <Link to="/login" style={{ textDecoration: "none" }}>
-            <span className="header_field_line_one signin">Hello, Sign in</span>
+          <span className="header_field_line_one ">Hello, Guest</span>
+          <Link to="/login" style={linkstyles}>
+            <span className="header_field_line_two">Sign in</span>
           </Link>
-          <span className="header_field_line_two">Account & Lists</span>
         </div>
         <div className="header_field">
           <span className="header_field_line_one">Returns </span>
-          <span className="header_field_line_two">& Orders</span>
+          <Link to="/orders" style={linkstyles}>
+            <span className="header_field_line_two">& Orders</span>
+          </Link>
         </div>
         <Link to="/checkout">
           <div className="cart">
             <AddShoppingCartIcon className="cart_icon" />
-            <span className="cart_count">{cart?.length}</span>
+            <div className="cart_count">
+              <span className="cart_count_value">{cart?.length}</span>
+            </div>
           </div>
         </Link>
       </div>

@@ -10,7 +10,7 @@ function Rating({ rating }) {
   const emptystars = Math.floor((5 - rating) / 1);
 
   return (
-    <div className="Rating">
+    <div className="rating">
       {Array(fullstars)
         .fill()
         .map((_, i) => {

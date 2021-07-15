@@ -3,14 +3,14 @@
   align-items: center;
   list-style: none;
   background-color: #232f3e;
-  height: 40px;
   color: white;
-  /* position: sticky;
-  top: 65px; */
-  padding: 0px 15px;
+  position: sticky;
+  top: 6vw;
+  z-index: 100;
+  padding: 0.7vw 1.5vw;
 }
 .navbar_item {
-  font-size: 13px;
+  font-size: 1vw;
   margin: 0px 10px;
 }
 .sidebar {
@@ -20,10 +20,10 @@
   margin-left: 0px;
 }
 .sidebar_icon {
-  height: 28px !important;
+  font-size: 1.8vw !important;
   margin-right: 5px;
 }
 .sidebar_tag {
-  font-size: 13px;
+  font-size: 1vw;
   font-weight: 800;
 }
