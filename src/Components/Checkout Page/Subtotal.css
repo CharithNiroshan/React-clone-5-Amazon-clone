@@ -1,0 +1,10 @@
+.subtotal {
+  text-align: right;
+  font-size: 1.47vw;
+  font-weight: 400;
+  color: rgb(7, 7, 7);
+  margin-bottom: 10px;
+}
+.subtotal_price {
+  font-weight: 900;
+}

@@ -8,7 +8,7 @@ import { useDataLayerValue } from "../../Context API/Datalayer";
 
 function Header() {
   const [{ cart }, dispatch] = useDataLayerValue();
-  console.log(cart);
+
   return (
     <div className="header">
       <Link to="/">
@@ -30,7 +30,9 @@ function Header() {
       </div>
       <div className="header_details">
         <div className="header_field">
-          <span className="header_field_line_one">Hello, Sign in</span>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <span className="header_field_line_one signin">Hello, Sign in</span>
+          </Link>
           <span className="header_field_line_two">Account & Lists</span>
         </div>
         <div className="header_field">
@@ -40,7 +42,7 @@ function Header() {
         <Link to="/checkout">
           <div className="cart">
             <AddShoppingCartIcon className="cart_icon" />
-            <span className="cart_count">{cart.no_of_items}</span>
+            <span className="cart_count">{cart?.length}</span>
           </div>
         </Link>
       </div>

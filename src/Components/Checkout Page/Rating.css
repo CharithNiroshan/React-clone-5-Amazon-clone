@@ -1,5 +1,4 @@
 .rating_star {
-  height: 20px !important;
-  width: 20px !important;
+  font-size: 1.2vw !important;
   color: #e6bb31 !important;
 }

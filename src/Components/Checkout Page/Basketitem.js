@@ -1,12 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Basketitem.css";
+import { useDataLayerValue } from "../../Context API/Datalayer";
 
-function Basketitem({ image, title, owner, price, type, stock_status }) {
-  const handleChange = (e) => {
-    console.log(e);
+function Basketitem({
+  image,
+  title,
+  owner,
+  price,
+  type,
+  stock_status,
+  index,
+  qty,
+}) {
+  const [{}, dispatch] = useDataLayerValue();
+
+  const [quantity, setQuantity] = useState(qty);
+
+  const hanldeClick = () => {
+    dispatch({
+      type: "DELETE_ITEM",
+      index: index,
+    });
   };
 
-  const handleClick = () => {};
+  const handleChange = (e) => {
+    dispatch({
+      type: "CHANGE_QUANTITY",
+      item: {
+        index: index,
+        value: e.target.value,
+      },
+    });
+    setQuantity(e.target.value);
+  };
 
   return (
     <div className="basketitem">
@@ -20,12 +46,13 @@ function Basketitem({ image, title, owner, price, type, stock_status }) {
           {stock_status ? "In Stock" : "Out of Stock"}
         </h4>
         <div className="basketitem_quantity">
-          <label for="quantity">Qty</label>
+          <label htmlFor="quantity">Qty</label>
           <select
             aria-label="Qty"
             id="quantity"
             name="quantity"
             onChange={(e) => handleChange(e)}
+            value={quantity}
           >
             {Array(10)
               .fill(1, 1)
@@ -34,7 +61,7 @@ function Basketitem({ image, title, owner, price, type, stock_status }) {
               })}
           </select>
         </div>
-        <h3 className="delete_item" onClick={handleClick()}>
+        <h3 className="delete_item" onClick={() => hanldeClick()}>
           Delete
         </h3>
       </div>

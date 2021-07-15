@@ -7,6 +7,10 @@
 .same_type_product_details {
   margin-left: 10px;
 }
+.same_type_product_image {
+  width: 10vw;
+  object-fit: contain;
+}
 .same_type_product_title {
   font-size: 1vw;
   font-weight: 400;
@@ -32,6 +36,7 @@
   background-color: #f7ca38;
   padding: 5px;
   border-radius: 3px;
+  cursor: pointer;
 }
 .same_type_product_rating {
   margin-bottom: 5px;

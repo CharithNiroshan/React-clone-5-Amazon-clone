@@ -1,7 +1,7 @@
 .basketitem {
   border: 1px solid #e7e7e7;
   padding: 15px;
-  max-width: 230px;
+  width: 28%;
   margin: 10px 10px 0px 0px;
   display: flex;
   flex-direction: column;
@@ -10,8 +10,11 @@
 }
 .basketitem_image {
   margin-bottom: 10px;
+  width: 15vw;
+  object-fit: contain;
 }
 .basketitem_details {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,6 +53,7 @@
   font-size: 0.9vw;
   font-weight: 400;
   color: #0066c0;
+  cursor: pointer;
   margin-bottom: 8px;
   text-decoration: none;
 }
