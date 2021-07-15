@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Common Components/Header";
 import Home from "./Components/Homepage/Home";
 import Navbar from "./Components/Common Components/Navbar";
 import Checkout from "./Components/Checkout Page/Checkout";
 import Login from "./Components/LoginPage/Login";
+import { auth } from "./Firebase/Firebase";
+import { useDataLayerValue } from "./Context API/Datalayer";
 
 function App() {
+  const [{}, dispatch] = useDataLayerValue();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+  }, []);
+
   return (
     <Router>
       <div className="app">

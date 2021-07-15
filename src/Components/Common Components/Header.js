@@ -5,13 +5,20 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Link } from "react-router-dom";
 import { useDataLayerValue } from "../../Context API/Datalayer";
+import { auth } from "../../Firebase/Firebase";
 
 function Header() {
-  const [{ cart }, dispatch] = useDataLayerValue();
+  const [{ cart, user }, dispatch] = useDataLayerValue();
   const linkstyles = {
     textDecoration: "none",
     color: "white",
     fontSize: "1vw",
+  };
+
+  const handleAuthentication = () => {
+    if (user) {
+      auth.signOut();
+    }
   };
 
   return (
@@ -35,9 +42,17 @@ function Header() {
       </div>
       <div className="header_details">
         <div className="header_field">
-          <span className="header_field_line_one ">Hello, Guest</span>
-          <Link to="/login" style={linkstyles}>
-            <span className="header_field_line_two">Sign in</span>
+          <span className="header_field_line_one ">
+            Hello, {user ? user.email : "Guest"}
+          </span>
+          <Link
+            to={user || "/login"}
+            style={linkstyles}
+            onClick={() => handleAuthentication()}
+          >
+            <span className="header_field_line_two">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </Link>
         </div>
         <div className="header_field">

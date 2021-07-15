@@ -1,7 +1,5 @@
 export const initialState = {
-  user: {
-    loginstatus: false,
-  },
+  user: null,
   cart: [
     {
       id: 1,
@@ -125,6 +123,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: newcart2,
+      };
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
       };
     default:
       return state;
