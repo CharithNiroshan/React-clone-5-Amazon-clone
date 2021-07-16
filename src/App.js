@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./Components/Common Components/Header";
+import Header from "./Components/Header";
 import Home from "./Components/Homepage/Home";
-import Navbar from "./Components/Common Components/Navbar";
+import Navbar from "./Components/Navbar";
 import Checkout from "./Components/Checkout Page/Checkout";
 import Login from "./Components/LoginPage/Login";
 import { auth } from "./Firebase/Firebase";

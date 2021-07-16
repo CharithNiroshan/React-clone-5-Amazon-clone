@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sametype_product.css";
-import Rating from "./Rating";
+import Rating from "../Rating";
 import { useDataLayerValue } from "../../Context API/Datalayer";
 
 function Sametype_product({ product }) {

@@ -1,34 +1,26 @@
 import React from "react";
 import "./Home.css";
-import Image from "../../Assets/Slider Images/1.jpg";
 import Product from "./Product";
-import top_product_details from "../Data/top_product_details";
-import Product_row from "./Product_row";
+import top_product_details from "../../Assets/Data/top_product_details";
 
 function Home() {
   return (
     <div className="home">
       <div className="home_container">
-        <img src={Image} alt="image1" className="home_image" />
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Home_v2_en_US_1x._CB429090084_.jpg"
+          alt="image1"
+          className="home_image"
+        />
         <div className="home_row">
           {top_product_details.map((product) => {
-            if (product.row === true) {
-              return (
-                <Product_row
-                  key={product.id}
-                  title={product.title}
-                  images={product.images}
-                />
-              );
-            } else {
-              return (
-                <Product
-                  key={product.id}
-                  title={product.title}
-                  products={product.products}
-                />
-              );
-            }
+            return (
+              <Product
+                key={product.id}
+                title={product.title}
+                products={product.items}
+              />
+            );
           })}
         </div>
       </div>

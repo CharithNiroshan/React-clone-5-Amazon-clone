@@ -4,8 +4,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Link } from "react-router-dom";
-import { useDataLayerValue } from "../../Context API/Datalayer";
-import { auth } from "../../Firebase/Firebase";
+import { useDataLayerValue } from "../Context API/Datalayer";
+import { auth } from "../Firebase/Firebase";
 
 function Header() {
   const [{ cart, user }, dispatch] = useDataLayerValue();
