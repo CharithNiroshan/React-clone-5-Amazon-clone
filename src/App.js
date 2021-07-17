@@ -5,8 +5,15 @@ import Home from "./Components/Homepage/Home";
 import Navbar from "./Components/Navbar";
 import Checkout from "./Components/Checkout Page/Checkout";
 import Login from "./Components/LoginPage/Login";
+import Payment from "./Components/Payment Page/Payment";
 import { auth } from "./Firebase/Firebase";
 import { useDataLayerValue } from "./Context API/Datalayer";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51JE1FVGZKYFXwhWb6cAvc94V73nBrwYvv0u80btdxHMyW3Oakjb2wYeCjWiMngTorCQrqt9gQlKz916CpCcnbgIi00fVz1xlT2"
+);
 
 function App() {
   const [{}, dispatch] = useDataLayerValue();
@@ -38,6 +45,13 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Navbar />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
           </Route>
           <Route path="/">
             <Header />

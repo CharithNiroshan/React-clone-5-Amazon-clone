@@ -59,3 +59,9 @@
 .suggested_item_box_title {
   font-size: 1vw;
 }
+.disable {
+  cursor: "not-allowed";
+}
+.enable_button {
+  cursor: pointer;
+}

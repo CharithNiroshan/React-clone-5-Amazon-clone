@@ -3,6 +3,7 @@ export const initialState = {
   cart: [],
   suggested_products: [
     {
+      id: 1,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/51Sa1iQRqOL._AC_UL100_SR100,84_.jpg",
       title: "Star Wars: A new Hope [Blu-ray]",
@@ -15,6 +16,7 @@ export const initialState = {
       price: 24.78,
     },
     {
+      id: 2,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/51Sa1iQRqOL._AC_UL100_SR100,84_.jpg",
       title: "Star Wars: A new Hope [Blu-ray]",
@@ -27,6 +29,7 @@ export const initialState = {
       price: 32.78,
     },
     {
+      id: 3,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/51Sa1iQRqOL._AC_UL100_SR100,84_.jpg",
       title: "Star Wars: A new Hope [Blu-ray]",
@@ -39,6 +42,7 @@ export const initialState = {
       price: 102.78,
     },
     {
+      id: 4,
       image:
         "https://images-na.ssl-images-amazon.com/images/I/51Sa1iQRqOL._AC_UL100_SR100,84_.jpg",
       title: "Star Wars: A new Hope [Blu-ray]",
