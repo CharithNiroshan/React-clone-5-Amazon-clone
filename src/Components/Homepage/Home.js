@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Product from "./Product";
 import top_product_details from "../../Assets/Data/top_product_details";
+import Slider from "../Homepage/Slider";
 
 function Home() {
   return (

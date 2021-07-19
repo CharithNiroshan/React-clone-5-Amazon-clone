@@ -5,6 +5,7 @@ import { ArrowBackIos } from "@material-ui/icons";
 import { ArrowForwardIos } from "@material-ui/icons";
 
 function Slider({ items }) {
+  console.log(items);
   const slider = useRef(null);
   const singleslidewidth = 100 / items.length;
   var currentposition = 0;
@@ -30,11 +31,7 @@ function Slider({ items }) {
     <div className="product_container">
       <div className="arrow arrow_left">
         <div
-          className={
-            count === 0
-              ? "arrow_div left_arrow_div disable"
-              : "arrow_div left_arrow_div enable"
-          }
+          className="arrow_div left_arrow_div"
           onClick={() => {
             handleClick("left");
           }}
@@ -59,11 +56,7 @@ function Slider({ items }) {
       </div>
       <div className="arrow arrow_right">
         <div
-          className={
-            count === items.length - 2
-              ? "arrow_div right_arrow_div disable"
-              : "arrow_div right_arrow_div enable"
-          }
+          className="arrow_div right_arrow_div"
           onClick={() => {
             handleClick("right");
           }}

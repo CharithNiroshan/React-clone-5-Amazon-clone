@@ -46,6 +46,7 @@
   background-color: #f7ca38;
   border-radius: 5px;
   margin-top: 0.8vw;
+  cursor: pointer;
 }
 .suggested_item_box {
   width: 100%;

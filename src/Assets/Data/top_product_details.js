@@ -6,6 +6,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg",
+        rating: 4,
       },
     ],
   },
@@ -16,6 +17,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg",
+        rating: 4,
       },
     ],
   },
@@ -26,6 +28,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Dash_Oculus_1x._SY304_CB667158353_.jpg",
+        rating: 4,
       },
     ],
   },
@@ -37,6 +40,7 @@ let top_product_details = [
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg",
         title: "sdasda",
+        rating: 4,
       },
     ],
   },
@@ -315,6 +319,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg",
+        rating: 4,
       },
     ],
   },
@@ -325,6 +330,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_TV_2X._SY304_CB432517900_.jpg",
+        rating: 4,
       },
     ],
   },
@@ -335,6 +341,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg",
+        rating: 4,
       },
     ],
   },
@@ -345,6 +352,7 @@ let top_product_details = [
       {
         image:
           "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_HomeBedding_Single_Cat_1x._SY304_CB418596953_.jpg",
+        rating: 4,
       },
     ],
   },

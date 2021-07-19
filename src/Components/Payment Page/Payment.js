@@ -3,61 +3,15 @@ import "./Payment.css";
 import BasketItem from "../Checkout Page/Basketitem";
 import { useDataLayerValue } from "../../Context API/Datalayer";
 import Subtotal from "../Checkout Page/Subtotal";
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import axios from "../../axios";
-import { useHistory } from "react-router-dom";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Paymentform from "./Paymentform";
 
 function Payment() {
   const [{ user, cart }, dispatch] = useDataLayerValue();
-  var carttotal = 0;
-
-  cart?.map((item) => {
-    carttotal += item?.price * item.qty;
-  });
-
-  const stripe = useStripe();
-  const elements = useElements();
-  const history = useHistory();
-
-  const [error, setError] = useState(null);
-  const [disabled, setDisabled] = useState(true);
-  const [succedded, setSuccedded] = useState(false);
-  const [processing, setProcessing] = useState("");
-  const [clientSecret, setClientSeceret] = useState(true);
-
-  useEffect(() => {
-    const getClientSeceret = async () => {
-      const response = await axios({
-        method: "post",
-        url: `/payment/create?total=${carttotal * 100}`,
-      });
-      setClientSeceret(response.data.clientSeceret);
-    };
-    getClientSeceret();
-  }, [cart]);
-
-  const handleSumbit = async (event) => {
-    event.preventDetault();
-    setProcessing(true);
-
-    const payload = await stripe
-      .confirmCardPayment(clientSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement),
-        },
-      })
-      .then(({ paymentIntent }) => {
-        setSuccedded(true);
-        setError(null);
-        setProcessing(false);
-        history.replace("/orders");
-      });
-  };
-
-  const handleChange = (event) => {
-    setDisabled(event.empty);
-    setError(event.error ? event.error.message : "");
-  };
+  const promise = loadStripe(
+    "pk_test_51JE1FVGZKYFXwhWb6cAvc94V73nBrwYvv0u80btdxHMyW3Oakjb2wYeCjWiMngTorCQrqt9gQlKz916CpCcnbgIi00fVz1xlT2"
+  );
 
   return (
     <div className="payment">
@@ -88,16 +42,10 @@ function Payment() {
             <h3>Payment Method</h3>
           </div>
           <div className="payment_details payment_section_content">
-            <form onSubmit={handleSumbit}>
-              <CardElement onChange={handleChange} />
-              <div className="payment_price_container">
-                <Subtotal cart={cart} />
-                <button disabled={processing || disabled || succedded}>
-                  <span>{processing ? <p>Processing</p> : <p>Buy Now</p>}</span>
-                </button>
-              </div>
-              {error && <div>{error}</div>}
-            </form>
+            <Subtotal cart={cart} />
+            <Elements stripe={promise}>
+              <Paymentform />
+            </Elements>
           </div>
         </div>
       </div>

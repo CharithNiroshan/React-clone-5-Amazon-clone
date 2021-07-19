@@ -1,5 +1,6 @@
 .emptycart {
   display: flex;
+  align-items: center;
   padding: 2vw;
 }
 .emptycart_image {
